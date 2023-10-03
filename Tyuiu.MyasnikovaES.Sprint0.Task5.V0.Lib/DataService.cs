@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tyuiu.MyasnikovaES.Sprint0.Task4.V0.Lib
+namespace Tyuiu.MyasnikovaES.Sprint0.Task5.V0.Lib
 {
     public class DataService
     {
@@ -13,7 +13,7 @@ namespace Tyuiu.MyasnikovaES.Sprint0.Task4.V0.Lib
         {
             return a + b;
         }
-        
+
         //Пример линейной структуры
         public static int Subtraction(int a, int b)
         {
@@ -26,11 +26,20 @@ namespace Tyuiu.MyasnikovaES.Sprint0.Task4.V0.Lib
             return a * b;
         }
 
-        //Пример линейной структуры
         public static int Division(int a, int b)
         {
-            return a / b;
-        }   
+            if (b == 0)
+            {
+                //Пример создан в целях демонстрации ветвления 
+                //В реальных проектах нужно использовать Exception
+                Console.WriteLine("Переменная b = {0} на ноль делить нельзя", b);
+                return -1;
 
+            }
+            else
+            {
+                return a / b;
+            }
+        }
     }
 }
